@@ -1,0 +1,30 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+#preview {
+    width: 500px;
+    height: 300px;
+    margin: 20px auto;
+    border: 2px solid #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    background-position: center;
+    font-size: 18px;
+    color: #333;
+}
+
+.gallery {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.thumbnail {
+    width: 100px;
+    cursor: pointer;
+    border: 1px solid #ccc;
+}
