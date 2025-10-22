@@ -1,15 +1,25 @@
+const thumbnails = document.querySelectorAll('.thumbnail');
 const preview = document.getElementById('preview');
 
-const thumbnails = document.querySelectorAll('.thumbnail');
+
+const originalText = preview.textContent;
 
 thumbnails.forEach(img => {
-    img.addEventListener('mouseover', function() {
-        preview.style.backgroundImage = `url('${img.src}')`;
-        preview.textContent = img.alt; 
+
+    img.addEventListener('mouseover', () => {
+        preview.style.backgroundImage = `url(${img.src})`;
+        preview.textContent = img.alt;
     });
 
-    img.addEventListener('mouseout', function() {
+
+    img.addEventListener('mouseout', () => {
         preview.style.backgroundImage = '';
-        preview.textContent = 'Di chuột qua một hình ảnh bên dưới để hiển thị ở đây.';
+        preview.textContent = originalText;
+    });
+
+    img.addEventListener('click', () => {
+        preview.style.backgroundImage = `url(${img.src})`;
+        preview.textContent = img.alt;
     });
 });
+
